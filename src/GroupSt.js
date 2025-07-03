@@ -92,7 +92,7 @@ const getHisobOfStudents=async()=>{
   }, [fetchTeacher]);
 
   const filteredData = group ? teachers.filter((item) => item.studentGroup === group || item.group === group || item.group2 === group) : [];
-const filtiredYuqlama=group ? yuqlamas.filter((item)=>item.group==group && new Date(new Date(item.date).getTime() + 24 * 60 * 60 * 1000).toISOString().split('T')[0]==new Date(new Date(date).getTime() + 24 * 60 * 60 * 1000).toISOString().split('T')[0]):[]
+const filtiredYuqlama=group ? yuqlamas.filter((item)=>item.group==group && new Date(new Date(item.date)).toISOString().split('T')[0]==new Date(new Date(date).getTime() + 24 * 60 * 60 * 1000).toISOString().split('T')[0]):[]
 const filtredHisob=group? hisobData.filter((h)=>h.group== group && filteredData.some((s)=>s.username==h.username)):[]
 console.log(filtredHisob);
 
