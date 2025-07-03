@@ -179,6 +179,7 @@ useEffect(() => {
         const result = await res.json();
         console.log('yuborildi', result.message);
         getYuqlamas()
+       getHisobOfStudents()
       } catch (err) {
         console.log('xatolik:', err.message);
       }
@@ -227,7 +228,7 @@ useEffect(() => {
         setRenameYuqlama({})
         setYuqlamaId(null)
         setReasonValue({})
-        
+         getHisobOfStudents()
       }
     }catch(err){
       console.log(err.message);
@@ -256,7 +257,7 @@ useEffect(() => {
         setRenameYuqlama({})
         setYuqlamaId(null)
         setReasonValue({})
-     
+      getHisobOfStudents()
         
       }
     }catch(err){
